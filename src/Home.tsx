@@ -1,8 +1,9 @@
 function Home() {
+  const sendToJoinLobbyPage = () => {};
   return (
     <div className="menu">
       <h1>Quiz Project</h1>
-      <button>Join Lobby</button>
+      <button onClick={sendToJoinLobbyPage}>Join Lobby</button>
       <br></br>
       <button>Create Lobby</button>
     </div>
