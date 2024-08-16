@@ -1,9 +1,17 @@
+body {
+  background-image: url('images/background.jpeg');
+}
+
 .menu{
   position: absolute;
   left: 50%;
   top: 20%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%); /* Keeps the div centered horizontally */
+  display: flex;               /* Enables flexbox */
+  justify-content: center;      /* Horizontally centers items */
+  align-items: center;          /* Vertically centers items */
+  flex-direction: column;       /* Optional: if you want items stacked vertically */
+  padding: 20px; 
 }
 
 .menu button {
@@ -35,14 +43,10 @@
   width: auto;
 }
 
-.menu button:hover,
-.menu button:focus {
-  background-color: #116f0a;;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-}
-
 .menu button:hover {
   transform: translateY(-1px);
+  background-color: #116f0a;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
 .menu button:active {
@@ -51,14 +55,8 @@
   transform: translateY(0);
 }
 
-
-.menu h1{
-  border-bottom:2px solid;
-}
-
 .menu input[type="text"] {
   width: 100%;
-  color: rgb(36, 35, 42);
   font-size: 16px;
   line-height: 20px;
   min-height: 28px;
@@ -68,7 +66,10 @@
   box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
   background: rgb(251, 251, 251);
   transition: all 0.1s ease 0s;
-  :focus{
-      border: 2px solid rgb(124, 255, 139);
-  }
+  
+}
+.menu input[type="text"]:hover,
+.menu input[type="text"]:focus{
+  border: 1px solid rgb(124, 255, 139);
+  outline: 1px solid rgb(124, 255, 139);
 }
